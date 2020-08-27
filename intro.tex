@@ -1,0 +1,141 @@
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\usecolortheme{lily}
+\usetheme{CambridgeUS}
+
+\title{ТРиТПО}
+\subtitle{Технологии разработки и тестирования программного обеспечения}
+\author{Artsiom Vasilevich}
+\institute[BSUIR]{Belarusian State University of Informatics and Radioelectronics}
+\date{\tiny \today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Введение в курс}
+    \framesubtitle{123}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Введение в курс}
+    \framesubtitle{Лабораторные занятия}
+    \begin{itemize}
+        \item 8 общих занятий
+        \item 8 занятий в подгруппах
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Введение в курс}
+    \framesubtitle{Путь к <<успеху>>}
+    \begin{itemize}
+        \item 6 лабораторных работ
+        \item 1 --- 4 индивидуальные
+        \item 5 --- 6 в парах
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Введение в курс}
+    \framesubtitle{Система оценок}
+    \begin{itemize}
+        \item максимальная оценка за лр 1.0 \pause
+        \item учёт ведётся с помощью установленных deadline \pause
+        \begin{itemize}
+            \item дата выдачи - start-date 10.09 \pause
+            \item soft deadline для каждой из подгрупп 17.09 \pause
+            \item hard deadline = start-date + $\sim$3 недели \pause
+            \item лр сдана в soft deadline: $\leq$ 1.0
+            \item лр сдана до hard но после soft: 0.2 --- 0.8
+            \item лр сдана в hard или позже: $\leq$ 0.2
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Введение в курс}
+    \framesubtitle{Коротко о лабораторных} \pause
+    \begin{enumerate}
+        \item Java, JUnit, Git \pause
+        \item Project SRS \pause
+        \item Use-case, Activity, State diagrams \pause
+        \item Class, Sequence, Component/Deployment diagrams \pause
+        \item Project implementation + \textbf{patterns} + code-review \pause
+        \item Test-cases and test-plan
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Введение в курс}
+    \framesubtitle{Лабораторная работа \textnumero 1}
+    Порядок выполнения (1/2): \pause
+    \begin{itemize}
+        \item Изучить теоретические сведения \pause
+        \item Установить git (если Вы этого ещё не сделали) \pause
+        \item Создать аккаунт на GitHub (если его ещё нет) \pause
+        \item Fork repository \url{https://github.com/trtpo/laba1} \pause
+        \item Clone repository --- git clone url \pause
+        \item Собрать проект, запустить, проанализировать полученный результат
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Введение в курс}
+    \framesubtitle{Лабораторная работа \textnumero 1}
+    Порядок выполнения (2/2): \pause
+    \begin{itemize}
+        \item Внести изменения в код (каждое изменение – отдельный commit) \pause
+        \begin{itemize}
+            \item изменить цветовую гамму изображения \pause
+            \item изменить уравнение фрактала \pause
+            \item расширить набор операций над комплексными числами и использовать их в новом уравнении \pause
+            \item добавить Unit тесты для проверки правильности новых операций \pause
+        \end{itemize}
+        \item Push изменений в origin \pause
+        \item Создать pull-request
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Введение в курс}
+    \framesubtitle{Лабораторная работа \textnumero 1}
+    Вопросы:
+    \begin{enumerate}
+        \item 1
+        \item 2
+        \item 3
+        \item 4
+        \item 5
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Введение в курс}
+    \framesubtitle{Ресурсы}
+    \begin{thebibliography}{10}
+        \bibitem{ProGit}[Goldbach, 1742]
+        Christian Goldbach.
+        \newblock A problem we should try to solve before the ISPN ’43 deadline,
+        \newblock \emph{Letter to Leonhard Euler}, 1742.
+        \bibitem{Java}[Java, 2020]
+    \end{thebibliography}
+\end{frame}
+
+\end{document}
