@@ -4,7 +4,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{hyperref}
-\usepackage{beamerprosper}
 
 \hypersetup{
     colorlinks=true,
@@ -28,13 +27,18 @@
 
 \frame{\titlepage}
 
-\begin{frame}
+\begin{frame}[t]
     \frametitle{Введение в курс}
     \framesubtitle{Контакты}
-    \email{avasilevich.work@gmail.com}
-    \email{a.vasilevich@bsuir.by}
-    telegram
-        @avasilevich
+    Email: \\
+    \hspace{0.5cm} \href{mailto:avasilevich.work@gmail.com}{avasilevich.work@gmail.com} (prefered) \\
+    \hspace{0.5cm} \href{mailto:a.vasilevich@bsuir.by}{a.vasilevich@bsuir.by} \\
+    \vspace{\baselineskip}
+    Telegram: \\
+    \hspace{0.5cm} \href{https://t.me/avasilevich}{@avasilevich} \\
+    \vspace{\baselineskip}
+    Презентации: \\
+    \hspace{0.5cm} \href{https://github.com/avasilevich/tritpo-latex}{github.com/avasilevich/tritpo-latex} \\
 \end{frame}
 
 \begin{frame}
@@ -87,13 +91,12 @@
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Введение в курс}
-    \framesubtitle{Лабораторная работа \textnumero 1}
-    Порядок выполнения (1/2): \pause
+    \frametitle{Лабораторная работа \textnumero 1}
+    \framesubtitle{Порядок выполнения (1/2)} \pause
     \begin{itemize}
         \item Изучить теоретические сведения \pause
-        \item Установить git (если Вы этого ещё не сделали) с \textbf{настоящим} именем и номером группы \pause
-        \item Создать аккаунт на GitHub (если его ещё нет) \pause
+        \item Установить git (если Вы этого ещё не сделали) \pause
+        \item Создать аккаунт на GitHub (если его ещё нет) с \textbf{настоящим} именем и номером группы \pause
         \item Fork repository \url{https://github.com/trtpo/laba1} \pause
         \item Clone repository --- git clone url \pause
         \item Собрать проект, запустить, проанализировать полученный результат
@@ -101,9 +104,8 @@
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Введение в курс}
-    \framesubtitle{Лабораторная работа \textnumero 1}
-    Порядок выполнения (2/2): \pause
+    \frametitle{Лабораторная работа \textnumero 1}
+    \framesubtitle{Порядок выполнения (2/2)}
     \begin{itemize}
         \item Внести изменения в код (каждое изменение – отдельный commit) \pause
         \begin{itemize}
@@ -118,10 +120,9 @@
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Введение в курс}
-    \framesubtitle{Лабораторная работа \textnumero 1}
-    Вопросы:
-    \begin{enumerate} \pause
+    \frametitle{Лабораторная работа \textnumero 1}
+    \framesubtitle{Вопросы} \pause
+    \begin{enumerate}
         \item Понятие <<системы контроля версий>>
         \begin{itemize}
             \item Виды СКВ
@@ -136,19 +137,27 @@
             \item Инкрементная
             \item Гибкие методологии
         \end{itemize} \pause
-        \item Java, JUnit \pause
+        \item Java, JUnit
     \end{enumerate}
 \end{frame}
 
 \begin{frame}[t]
-    \frametitle{Введение в курс}
+    \frametitle{Лабораторная работа \textnumero 1}
     \framesubtitle{Ресурсы}
     \begin{thebibliography}{10}
-        \bibitem{ProGit}[Goldbach, 1742]
-        Christian Goldbach.
-        \newblock A problem we should try to solve before the ISPN ’43 deadline,
-        \newblock \emph{Letter to Leonhard Euler}, 1742.
-        \bibitem{Java}[Java, 2020]
+        \beamertemplatebookbibitems
+        \bibitem{ProGit}
+        Pro Git, Second Edition.
+        \newblock {\em Open source comprehesive git book}.
+        \newblock Scott Chacon, Ben Straub, Community, 2020.
+        \bibitem{Java}
+        Java: The Complete Reference, Eleventh Edition.
+        \newblock {\em Book explains how to develop, compile, debug, and run Java programs}.
+        \newblock Herbert Schildt, 2018.
+        \bibitem{Lections}
+        ЭУМКД ТРиТПО.
+        \newblock {\em Лекционный материал по дисциплине ТРиТПО}.
+        \newblock Наталья Искра, 2019.
     \end{thebibliography}
 \end{frame}
 
