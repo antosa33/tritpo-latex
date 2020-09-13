@@ -1,0 +1,234 @@
+\documentclass[aspectratio=169, 12pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\usecolortheme{lily}
+\usetheme{CambridgeUS}
+
+\title{ТРиТПО}
+\subtitle{Технологии разработки и тестирования программного обеспечения}
+\author{Artsiom Vasilevich}
+\institute[BSUIR]{Belarusian State University of Informatics and Radioelectronics}
+\date{\tiny \today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Понятие}
+    IEEE Standard Glossary of Software Engineering Terminology (1990)
+    определяет <<программные требования>> как: \pause
+    \begin{enumerate}
+        \item Условия или возможности, необходимые пользователю для решения
+              проблем или достижения целей; \newline \pause
+        \item Условия или возможности, которыми должна обладать система или
+              системные компоненты, чтобы выполнить контракт или удовлетворять
+              стандартам, спецификациям или другим формальным документам; \newline \pause
+        \item Документированное представление условий или возможностей для
+              пунктов 1 и 2.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Проблемы на проектах, связанные с требованиями} \pause
+    \begin{itemize}
+        \item Пропустили заинтересованных лиц (ЗЛ) \pause
+        \item Недостаточное вовлечение ЗЛ \pause
+        \item Расползание рамок проекта (scope creep) \pause
+        \item Некачественные требования \pause
+        \item Разработка ненужного функционала (gold plating) \pause
+        \item Поспешные оценки и планирование
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Виды требований по уровням} \pause
+    Бизнес-требования --- определяют назначение ПО, описываются в документе о
+    видении (vision) и границах проекта (scope). \newline \pause
+
+    Пользовательские требования --- определяют набор пользовательских задач, которые должна
+    решать система, а также способы (сценарии) их решения. Пользовательские требования
+    могут выражаться в виде фраз утверждений, в виде вариантов ипользования (use case),
+    пользовательских историй (user story), сценариев взаимодействия (scenario). \newline \pause
+
+    Функциональные требования --- определяют <<как>> реализовать продукт. Описываются в системоной
+    спецификации (System Requirement Specification, SRS).
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Виды требований по характеру} \pause
+    Функциональные --- требования к поведению системы, продукта \newline \pause
+
+    Нефункциональные --- требования к характеру поведения системы \pause
+    \begin{itemize}
+        \item Бизнес-правила
+        \item Атрибуты качества
+        \item Внешние интерфейсы
+        \item Ограничения
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Источники требований}
+    \begin{itemize}
+        \item Заинтересованные стороны (stakeholders) и опытные пользователи (Power Users) \pause
+        \item Федеральное и муниципальное отраслевое законодательство
+              (конституция, законы, распоряжения) \pause
+        \item Нормативное обеспечение организации (регламенты, положения, ...) \pause
+        \item Текущая организация деятельности объекта автоматизации \pause
+        \item Модели деятельности (диаграммы бизнес-процессов) \pause
+        \item Представления и ожидания потребителей и пользователей системы \pause
+        \item Журналы пользования существующих программно-аппаратных систем \pause
+        \item Конкурирующие программные продукты
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Единичность \newline
+    \begin{itemize}
+        \item Требования описывает одну и только одну вещь \newline \pause
+        \item Мне (как заказчику) важны все возможности интернет-магазина.
+              Всё должно быть готово как можно быстрее.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Завершенность \newline
+    \begin{itemize}
+        \item Требование полностью определено в одном месте и вся необходимая информация присутствует \newline \pause
+        \item Страница <<Каталог>> должна отображать список категорий товаров (телевизоры, компьютеры, ??? TBD),
+              предлагаемых интернет-магазином.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Последовательность \newline
+    \begin{itemize}
+        \item Требование не противоречит другим требованиям и полностью соответствует внешней документации \newline \pause
+    \end{itemize}
+    Атомарность \newline
+    \begin{itemize}
+        \item Требование не может быть разбито на ряд более детальных требования без потери завершенности
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Отслеживаемость \newline
+    \begin{itemize}
+        \item Требование полностью или частично соответсвует деловым нуждам как заявлено ЗЛ и задокументировано \newline \pause
+    \end{itemize}
+    Актуальность \newline
+    \begin{itemize}
+        \item Требование не стало устаревшим с течением времени
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Выполнимость \newline
+    \begin{itemize}
+        \item Требование может быть реализовано в пределах проекта \newline \pause
+        \item В интернет-магазине должна быть реализована возможность запуска Internet Explorer на стороне
+              пользователя, в случае если он зашёл на сайт под другим браузером.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Недвусмысленность \newline \pause
+    \begin{itemize}
+        \item Требование кратко определено без обращения к техническому жаргону, акронимам
+              и другим скрытым формулировкам \pause
+        \item Выражает объективные факты, не субъективные мнения (<<удобный интерфейс>>);
+              возможна одна и только одна интерпретация \pause
+        \item Определение не содержит нечётких фраз \pause
+        \item Не содержит отрицательных утверждений и составных утверждений
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Обязательность \newline
+    \begin{itemize}
+        \item Требование представляет определённую заинтересованным лицом характеристику,
+              отсутствие которой приведёт к неполноценности решения, которая не может быть проигнорирована \newline \pause
+        \item ! необязательное требование --- противоречие самому понятию требования !
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Software Requirements}
+    \framesubtitle{Характеристики качественных требований}
+    Проверяемость \newline
+    \begin{itemize}
+        \item Реализованность требования может быть определена через один из четырёх возможных методов:
+              осмотр, демонстрация, тест или анализ \newline \pause
+        \item Система должна обладать хорошей производительностью и быстро загружаться в браузере.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Лабораторная работа \textnumero 2}
+    \framesubtitle{Порядок выполнения (1/2)} \pause
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Лабораторная работа \textnumero 2}
+    \framesubtitle{Порядок выполнения (2/2)}
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Лабораторная работа \textnumero 2}
+    \framesubtitle{Вопросы} \pause
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Лабораторная работа \textnumero 2}
+    \framesubtitle{Ресурсы}
+    \begin{thebibliography}{10}
+        \beamertemplatebookbibitems
+        \bibitem{ProGit}
+        Pro Git, Second Edition.
+        \newblock {\em Open source comprehesive git book}.
+        \newblock Scott Chacon, Ben Straub, Community, 2020.
+        \bibitem{Java}
+        Java: The Complete Reference, Eleventh Edition.
+        \newblock {\em Book explains how to develop, compile, debug, and run Java programs}.
+        \newblock Herbert Schildt, 2018.
+        \bibitem{Lections}
+        ЭУМКД ТРиТПО.
+        \newblock {\em Лекционный материал по дисциплине ТРиТПО}.
+        \newblock Наталья Искра, 2019.
+    \end{thebibliography}
+\end{frame}
+
+\end{document}
