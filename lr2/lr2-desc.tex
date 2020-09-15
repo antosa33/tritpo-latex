@@ -1,11 +1,13 @@
 \documentclass[aspectratio=169, 12pt]{beamer}
 
-\usepackage{lmodern}
 \usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[russian,english]{babel}
+\usepackage{lmodern}
 \usepackage{hyperref}
 
 \hypersetup{
+    unicode=true,
     colorlinks=true,
     linkcolor=blue,
     filecolor=blue,
@@ -85,11 +87,121 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Бизнес требования}
+    Содержат высокоуровневые проектные цели заказчиков системы \newline \pause
+
+    Отвечают на вопрос: Почему мы делаем систему? Зачем? \newline \pause
+
+    Источник: спонсор проекта (заказчик системы). \newline \pause
+
+    Пример: Разработать интернет-магазин по торговле техникой с целью увеличения
+    прибыли компании на 30\% в 2021 году.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Требования пользователей}
+    Описывают задачи, которые пользователи смогут решать с помощью системы.
+    Также описывают любые другие функциональные и не только пожелания к системе. \newline \pause
+
+    Отвечают на вопрос: Что хотят пользователи? \newline \pause
+
+    Источник: реальные пользователи (фокус-группы, менеджеры пользователей). \newline \pause
+
+    Пример: Возможность создать онлайн-заказ на любой вид товара в интернет-магазине.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Функциональные и нефункциональные требования}
+    Определяют функциональность ПО и его дополнительные нефункциональные аспекты,
+    которые должны реализовать разработчики, чтобы пользователи могли выполнять
+    требуемые задачи. \newline \pause
+
+    Отвечают на вопрос: Что должен реализовать разработчик?
+    Как должна вести себя система, чтобы удовлетворять пользовательским требованиям? \newline \pause
+
+    Источник: аналитики \newline \pause
+
+    Пример: Реализовать страницу <<Каталог>> с возможностью просмотра списка товаров
+    и функционалом заказа товара.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Нефункциональные требования: бизнес-правила}
+    Нефункциональные требования, диктуемые политикой организации или вышестоящих
+    органов, их инструкциями, стандартами или нормами, которые определяют или
+    накладывают ограничения на деятельность организации, а, следовательно, и на
+    разрабатываемую систему / решение. \newline \pause
+
+    Пример: магазин обрабатывает заказы покупателей только до 20:00 текущего дня.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Нефункциональные требования: атрибуты качества}
+    Описывают все основные характеристики продукта, которые важны
+    заинтересованным лицам и объектам внешней среды. Эти требования
+    влияют на функции решения и на его реализацию. \newline \pause
+
+    Виды: юзабилити, производительность, поддерживаемость, надежность,
+    безопасность и т.д. \newline \pause
+
+    Пример: доступ к системе должен осуществляться по HTTPS протоколу.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Нефункциональные требования: внешние интерфейсы}
+    Описание интерфейсов к системе со стороны пользователей, других
+    программных систем или устройств. \newline \pause
+
+    Виды: интерфейс пользователя, программные интерфейсы, интерфейсы устройств,
+    коммуникационные интерфейсы. \newline \pause
+
+    Пример:
+    \begin{itemize}
+        \item Пользовательский интерфейс интернет-магазина должен поддерживать
+              минимальное разрешение экрана 1366 * 768.
+        \item Интернет-магазин должен иметь интеграцию с PayPal для оплаты товаров
+              пользователями.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Нефункциональные требования: ограничения}
+    Ограничения для разработчиков на спектр выбора подходов к архитектуре
+    и разработке проекта. \newline \pause
+
+    Виды: ограничения на выбор языка разработки, дизайн и т.д. \newline \pause
+
+    Пример: система должна быть реализована на платформе Java EE 8.0
+\end{frame}
+
+\begin{frame}
+    \frametitle{Software Requirements}
+    \framesubtitle{Нефункциональные требования}
+    Требования к продукту (Product requirements) \\
+    \hspace{0.5cm} Поведение продукта (память, надежность, удобство пользования) \newline \pause
+
+    Организационные требования (Organizational requirements) \\
+    \hspace{0.5cm} Регламент в компаниях заказчика и разработчика (требования к \\
+    \hspace{0.5cm} процессу, выполнение требований) \newline \pause
+
+    Внешние требования (External requirements) \\
+    \hspace{0.5cm} Внешние факторы по отношению к системе и процессу разработки \\
+    \hspace{0.5cm} (законодательство, вопросы этики)
+\end{frame}
+
 \begin{frame}[t]
     \frametitle{Software Requirements}
-    \framesubtitle{Источники требований}
+    \framesubtitle{Источники требований} \pause
     \begin{itemize}
-        \item Заинтересованные стороны (stakeholders) и опытные пользователи (Power Users) \pause
+        \item Заинтересованные стороны (Stakeholders) и опытные пользователи (Power Users) \pause
         \item Федеральное и муниципальное отраслевое законодательство
               (конституция, законы, распоряжения) \pause
         \item Нормативное обеспечение организации (регламенты, положения, ...) \pause
@@ -106,7 +218,7 @@
     \framesubtitle{Характеристики качественных требований}
     Единичность \newline
     \begin{itemize}
-        \item Требования описывает одну и только одну вещь \newline \pause
+        \item Требование описывает одну и только одну вещь \newline \pause
         \item Мне (как заказчику) важны все возможности интернет-магазина.
               Всё должно быть готово как можно быстрее.
     \end{itemize}
@@ -196,39 +308,25 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}
     \frametitle{Лабораторная работа \textnumero 2}
     \framesubtitle{Порядок выполнения (1/2)} \pause
+    \begin{itemize}
+        \item Придумать (выбрать из предложенных) тему проекта
+        \item Обсудить с соседом справа или слева
+        \item Зафиксировать тему проекта у преподавателя
+    \end{itemize}
 \end{frame}
 
-\begin{frame}[t]
+\begin{frame}
     \frametitle{Лабораторная работа \textnumero 2}
-    \framesubtitle{Порядок выполнения (2/2)}
-\end{frame}
-
-\begin{frame}[t]
-    \frametitle{Лабораторная работа \textnumero 2}
-    \framesubtitle{Вопросы} \pause
-\end{frame}
-
-\begin{frame}[t]
-    \frametitle{Лабораторная работа \textnumero 2}
-    \framesubtitle{Ресурсы}
-    \begin{thebibliography}{10}
-        \beamertemplatebookbibitems
-        \bibitem{ProGit}
-        Pro Git, Second Edition.
-        \newblock {\em Open source comprehesive git book}.
-        \newblock Scott Chacon, Ben Straub, Community, 2020.
-        \bibitem{Java}
-        Java: The Complete Reference, Eleventh Edition.
-        \newblock {\em Book explains how to develop, compile, debug, and run Java programs}.
-        \newblock Herbert Schildt, 2018.
-        \bibitem{Lections}
-        ЭУМКД ТРиТПО.
-        \newblock {\em Лекционный материал по дисциплине ТРиТПО}.
-        \newblock Наталья Искра, 2019.
-    \end{thebibliography}
+    \framesubtitle{Порядок выполнения (2/2)} \pause
+    \begin{itemize}
+        \item Подготовить Project SRS
+        \item Подготовить мокапы проекта
+        \item Залить изменения на GitHub
+        \item Отправить ссылку на репозиторий с Вашим именем на адрес \href{mailto:avasilevich.work@gmail.com}{avasilevich.work@gmail.com}
+    \end{itemize}
 \end{frame}
 
 \end{document}
